@@ -1,0 +1,2 @@
+Projects[[:space:]]Vids[[:space:]]School/*.MOV filter=lfs diff=lfs merge=lfs -text
+Projects[[:space:]]Vids[[:space:]]School/*.mov filter=lfs diff=lfs merge=lfs -text
