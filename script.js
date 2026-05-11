@@ -475,6 +475,93 @@ document.querySelectorAll('.contact-details').forEach(container => {
     });
 });
 
+// School video popup player
+const videoModal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+const modalVideoTitle = document.getElementById('modalVideoTitle');
+const closeVideoModalBtn = document.getElementById('closeVideoModal');
+
+const openSchoolVideoModal = (videoSrc, titleText) => {
+    if (!videoModal || !modalVideo) {
+        return;
+    }
+
+    modalVideo.src = videoSrc;
+    modalVideoTitle.textContent = titleText || 'School Project Video';
+    videoModal.classList.add('open');
+    videoModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    const playPromise = modalVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(() => {
+            // Ignore autoplay restrictions; user can press play manually.
+        });
+    }
+};
+
+modalVideo?.addEventListener('error', () => {
+    const src = modalVideo.getAttribute('src');
+    if (src) {
+        window.open(src, '_blank');
+    }
+});
+
+const closeSchoolVideoModal = () => {
+    if (!videoModal || !modalVideo) {
+        return;
+    }
+
+    videoModal.classList.remove('open');
+    videoModal.setAttribute('aria-hidden', 'true');
+    modalVideo.pause();
+    modalVideo.removeAttribute('src');
+    modalVideo.load();
+    document.body.style.overflow = '';
+};
+
+document.querySelectorAll('.school-video-card').forEach((card) => {
+    const previewVideo = card.querySelector('.project-video');
+    const source = previewVideo ? previewVideo.querySelector('source') : null;
+    const title = card.querySelector('h3') ? card.querySelector('h3').textContent.trim() : 'School Project Video';
+    const videoSrc = source ? source.getAttribute('src') : '';
+
+    if (!videoSrc || !previewVideo) {
+        return;
+    }
+
+    previewVideo.controls = false;
+    previewVideo.addEventListener('click', () => openSchoolVideoModal(videoSrc, title));
+    previewVideo.addEventListener('play', (event) => {
+        event.preventDefault();
+        previewVideo.pause();
+        openSchoolVideoModal(videoSrc, title);
+    });
+
+    const wrapper = card.querySelector('.video-wrapper');
+    if (wrapper) {
+        wrapper.addEventListener('click', () => openSchoolVideoModal(videoSrc, title));
+    }
+});
+
+if (videoModal) {
+    videoModal.addEventListener('click', (event) => {
+        if (event.target.closest('[data-close-modal="true"]')) {
+            closeSchoolVideoModal();
+        }
+    });
+}
+
+if (closeVideoModalBtn) {
+    closeVideoModalBtn.addEventListener('click', closeSchoolVideoModal);
+}
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && videoModal && videoModal.classList.contains('open')) {
+        closeSchoolVideoModal();
+    }
+});
+
 // Add progress animation on page load
 window.addEventListener('scroll', () => {
     const scrollProgress = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
