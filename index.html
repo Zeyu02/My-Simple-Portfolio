@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,19 +14,20 @@
             <div class="logo">
                 <span class="logo-icon">Z</span>
             </div>
-            <ul class="nav-menu">
+            <ul id="nav-menu" class="nav-menu" aria-label="Primary navigation">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About Me</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Portfolio</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="nav-link">Contact Me</a></li>
             </ul>
             <a href="#contact" class="contact-btn">Get in Touch</a>
-            <div class="hamburger">
+            <button type="button" class="hamburger" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -35,20 +36,20 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="greeting">Portfolio</p>
+                    <p class="greeting">Hi I am</p>
                     <h1 class="hero-title">
-                        Hi! I'M ZEUEL<br>
-                        <span class="highlight">LALAGUNA</span>
+                       Zeuel <span class="highlight"> Lalaguna</span>
                     </h1>
                     <p class="hero-description">
-                      An IT graduate with hands-on experience in front-end development, UI/UX design, manual QA testing, system debugging, and video editing.
+                        <strong>An IT graduate</strong> with hands-on experience in front-end development, UI/UX design, manual QA testing, system debugging, and video editing.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn-primary">View Portfolio</button>
+                        <a href="#projects" class="btn-primary">View Portfolio</a>
+                        <a href="#contact" class="btn-secondary">Contact Me</a>
                         <div class="social-icons">
-                            <a href="https://www.facebook.com/Zeuel.03/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                             <a href="https://www.facebook.com/Zeuel.03/" target="_blank" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://github.com/Zeyu02" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Zeyuuu" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                             <a href="https://github.com/Zeyuuu" target="_blank" class="social-icon github" aria-label="GitHub (Zeyuuu)"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -63,6 +64,10 @@
                         <img src="Prof.jpg" alt="Zeuel" class="profile-image">
                     </div>
                 </div>
+                <div class="hero-review-card">
+                    <span>2+ Years Experience</span>
+                    <strong>Front-end, UI/UX & QA</strong>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -76,7 +81,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><span class="hover-letter">A</span><span>bout</span> <span class="highlight">Me</span></h2>
+                <h2 class="section-title" aria-label="About Me"><span class="hover-letter">A</span><span>bout</span> <span class="highlight">Me</span></h2>
                 <p class="section-subtitle">Get to know more about my background and experience</p>
                 <div class="title-decoration">
                     <span class="line"></span>
@@ -89,10 +94,6 @@
                     <div class="image-frame">
                         <div class="avatar-large">
                             <img src="Profile.jpg" alt="Zeuel" class="profile-image-large">
-                        </div>
-                        <div class="experience-badge">
-                            <span class="badge-number">2+</span>
-                            <span class="badge-text">Years Experience</span>
                         </div>
                     </div>
                 </div>
@@ -112,6 +113,24 @@
                         I approach every project with a willingness to learn, grow, and contribute 
                         positively to the team.
                     </p>
+                    <div class="about-skills" aria-label="Core design skills">
+                        <div class="about-skill">
+                             <div class="about-skill-label"><strong>UX Design</strong><b></b></div>
+                             <div class="about-skill-track"><i data-width="92%" style="--progress-width: 92%"></i></div>
+                        </div>
+                        <div class="about-skill">
+                             <div class="about-skill-label"><strong>Website Design</strong><b></b></div>
+                             <div class="about-skill-track"><i data-width="88%" style="--progress-width: 88%"></i></div>
+                        </div>
+                        <div class="about-skill">
+                             <div class="about-skill-label"><strong>Video Editing</strong><b></b></div>
+                             <div class="about-skill-track"><i data-width="84%" style="--progress-width: 84%"></i></div>
+                        </div>
+                        <div class="about-skill">
+                             <div class="about-skill-label"><strong>QA Testing</strong><b></b></div>
+                             <div class="about-skill-track"><i data-width="88%" style="--progress-width: 88%"></i></div>
+                        </div>
+                    </div>
                     <div class="about-stats">
                         <div class="stat">
                             <i class="fas fa-code"></i>
@@ -134,136 +153,93 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><span class="hover-letter">M</span><span>y</span> <span class="highlight">Skills</span></h2>
-                <p class="section-subtitle">Soft skills and tools I work with</p>
+                <h2 class="section-title" aria-label="My Design Services"><span class="hover-letter">M</span><span>y</span> <span class="highlight">Services</span></h2>
+                <p class="section-subtitle">Services inspired by my current projects, skills, and experience</p>
                 <div class="title-decoration">
                     <span class="line"></span>
                     <span class="dot"></span>
                     <span class="line"></span>
                 </div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <h4>JavaScript</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 84%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
-                    <h4>Git & GitHub</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 82%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h4>QA Testing</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h4>Problem-Solving</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h4>Attention to Detail</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h4>Communication</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4>Teamwork</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 87%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h4>Time Management</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 86%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h4>Adaptability</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 91%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h4>Critical Thinking</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 88%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h4>Project Planning</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 84%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h4>Creativity</h4>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 89%"></div>
-                    </div>
-                </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Clean interfaces, user flows, and polished layouts for web and mobile experiences.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Responsive front-end pages with accessible structure, strong visuals, and smooth interactions.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-film"></i></div>
+                    <h3>Video Editing</h3>
+                    <p>Engaging video content crafted for mobile and desktop, with smooth pacing, clear storytelling, and strong visual flow.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon"><i class="fas fa-bug"></i></div>
+                    <h3>QA Testing</h3>
+                    <p>Application and website testing focused on identifying issues and improving user experience.</p>
+                </article>
             </div>
         </div>
     </section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" aria-label="My Skills"><span class="hover-letter">M</span><span>y</span> <span class="highlight">Skills</span></h2>
+            <p class="section-subtitle">Core competencies and professional strengths</p>
+            <div class="title-decoration">
+                <span class="line"></span>
+                <span class="dot"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-code"></i></div>
+                <h4>Front-End Developer</h4>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                <h4>UI/UX Design</h4>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-video"></i></div>
+                <h4>Video Editing</h4>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-bug"></i></div>
+                <h4>QA Testing</h4>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fab fa-github"></i></div>
+                <h4>Git & GitHub</h4>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                <h4>Communication</h4>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon"><i class="fas fa-search"></i></div>
+                <h4>Attention to Detail</h4>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><span class="hover-letter">F</span><span>eatured</span> <span class="highlight">Projects</span></h2>
+                <h2 class="section-title" aria-label="Featured Projects"><span class="hover-letter">F</span><span>eatured</span> <span class="highlight">Projects</span></h2>
                 <p class="section-subtitle">Check out some of my recent work on GitHub</p>
                 <div class="title-decoration">
                     <span class="line"></span>
@@ -271,8 +247,13 @@
                     <span class="line"></span>
                 </div>
             </div>
+            <div class="portfolio-filter" aria-label="Project filters">
+                <button type="button" class="filter-btn" data-filter="Website Design" aria-pressed="false">Website Design</button>
+                <button type="button" class="filter-btn" data-filter="App Design" aria-pressed="false">App Design</button>
+                <button type="button" class="filter-btn" data-filter="School Projects" aria-pressed="false">School Projects</button>
+            </div>
             <div class="projects-grid">
-                <a class="project-card project-card-link" href="https://project-4c6df.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <a class="project-card project-card-link" href="https://project-4c6df.vercel.app/" target="_blank" rel="noopener noreferrer" data-category="Website Design">
                     <div class="project-image">
                         <i class="fas fa-laptop-code"></i>
                     </div>
@@ -286,7 +267,8 @@
                         <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a class="project-card project-card-link" href="https://github.com/Zeyu02/Mugshot-POS" target="_blank" rel="noopener noreferrer">
+
+                <a class="project-card project-card-link" href="https://github.com/Zeyu02/Mugshot-POS" target="_blank" rel="noopener noreferrer" data-category="App Design">
                     <div class="project-image">
                         <i class="fab fa-github"></i>
                     </div>
@@ -300,7 +282,8 @@
                         <span class="project-link">View Repository <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a class="project-card project-card-link" href="https://plounix.xyz/" target="_blank" rel="noopener noreferrer">
+
+                <a class="project-card project-card-link" href="https://plounix.xyz/" target="_blank" rel="noopener noreferrer" data-category="Website Design">
                     <div class="project-image">
                         <i class="fas fa-globe"></i>
                     </div>
@@ -314,106 +297,112 @@
                         <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- School Projects Section -->
-    <section id="school-projects" class="projects school-projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title"><span class="hover-letter">S</span><span>chool</span> <span class="highlight">Projects</span></h2>
-                <p class="section-subtitle">Tap a video to play it, or open it in a new tab</p>
-                <div class="title-decoration">
-                    <span class="line"></span>
-                    <span class="dot"></span>
-                    <span class="line"></span>
-                </div>
-            </div>
-            <div class="projects-grid school-grid">
-                <article class="project-card school-video-card">
+<a class="project-card project-card-link" href="https://github.com/Zeyu02/POSv2" target="_blank" rel="noopener noreferrer" data-category="Website Design">
+    <div class="project-image">
+        <i class="fab fa-github"></i>
+    </div>
+    <div class="project-content">
+        <h3>POSv2</h3>
+        <p>Source code for POS version 2.</p>
+        <div class="project-tags">
+            <span class="tag">GitHub Repo</span>
+            <span class="tag">Source Code</span>
+        </div>
+        <span class="project-link">View Repository <i class="fas fa-arrow-right"></i></span>
+    </div>
+</a><article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/UICian%20Starter%20Pack.mp4" type="video/mp4">
+                            <source src="/Projects Vids School/UICian%20Starter%20Pack.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>UICian Starter Pack</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/UICian%20Starter%20Pack.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/UICian%20Starter%20Pack.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="project-card school-video-card">
+<article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/910edecf07ef4a8291a637525b0febd1%20(1).mp4" type="video/mp4">
+                            <source src="/Projects Vids School/910edecf07ef4a8291a637525b0febd1%20(1).mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>Boni Fast Talk</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/910edecf07ef4a8291a637525b0febd1%20(1).mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/910edecf07ef4a8291a637525b0febd1%20(1).mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="project-card school-video-card">
+<article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_02DD5F59-6207-41C4-8BA3-5AB2D0FA0ACC.mp4" type="video/mp4">
+                            <source src="/Projects Vids School/copy_02DD5F59-6207-41C4-8BA3-5AB2D0FA0ACC.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>Standupper</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_02DD5F59-6207-41C4-8BA3-5AB2D0FA0ACC.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/copy_02DD5F59-6207-41C4-8BA3-5AB2D0FA0ACC.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="project-card school-video-card">
+<article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_238C25DF-DCD4-4961-8D71-2D5A114A81B9.mp4" type="video/mp4">
+                            <source src="/Projects Vids School/copy_238C25DF-DCD4-4961-8D71-2D5A114A81B9.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>POV</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_238C25DF-DCD4-4961-8D71-2D5A114A81B9.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/copy_238C25DF-DCD4-4961-8D71-2D5A114A81B9.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="project-card school-video-card">
+<article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_4191C95D-C922-4756-AB46-488B62EA810C.mp4" type="video/mp4">
+                            <source src="/Projects Vids School/copy_4191C95D-C922-4756-AB46-488B62EA810C.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>Saturdays in UIC 4</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_4191C95D-C922-4756-AB46-488B62EA810C.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/copy_4191C95D-C922-4756-AB46-488B62EA810C.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="project-card school-video-card">
+<article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_7A19D70E-F07B-4092-BC96-2EF81EED3E16.mp4" type="video/mp4">
+                            <source src="/Projects Vids School/copy_7A19D70E-F07B-4092-BC96-2EF81EED3E16.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>Exams info</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/copy_7A19D70E-F07B-4092-BC96-2EF81EED3E16.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/copy_7A19D70E-F07B-4092-BC96-2EF81EED3E16.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
-
-                <article class="project-card school-video-card">
+                <a class="project-card project-card-link" href="https://drzwebsite-omega.vercel.app/" target="_blank" rel="noopener noreferrer" data-category="Website Design">
+    <div class="project-image">
+        <i class="fas fa-globe"></i>
+    </div>
+    <div class="project-content">
+        <h3>DrZ Website</h3>
+        <p>Live website hosted on Vercel.</p>
+        <div class="project-tags">
+            <span class="tag">Live Site</span>
+            <span class="tag">Click to Open</span>
+        </div>
+        <span class="project-link">Visit Site <i class="fas fa-arrow-right"></i></span>
+    </div>
+</a>
+<article class="project-card school-video-card" data-category="School Projects">
                     <div class="project-image video-wrapper">
                         <video class="project-video" controls preload="metadata">
-                            <source src="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/DraftResource_1771038847.823813.mp4" type="video/mp4">
+                            <source src="/Projects Vids School/DraftResource_1771038847.823813.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-content">
                         <h3>Bajada</h3>
-                        <a href="https://raw.githubusercontent.com/Zeyu02/My-Simple-Portfolio/main/Projects%20Vids%20School/DraftResource_1771038847.823813.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
+                        <a href="/Projects Vids School/DraftResource_1771038847.823813.mp4" target="_blank" class="project-link">Open Video File <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
+
             </div>
         </div>
     </section>
@@ -422,7 +411,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><span class="hover-letter">G</span><span>et In</span> <span class="highlight">Touch</span></h2>
+                <h2 class="section-title" aria-label="Get In Touch"><span class="hover-letter">G</span><span>et In</span> <span class="highlight">Touch</span></h2>
                 <p class="section-subtitle">Let's connect and collaborate on exciting projects</p>
                 <div class="title-decoration">
                     <span class="line"></span>
@@ -438,39 +427,50 @@
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
-                                <h4>Email</h4>
-                                <p><a href="mailto:Zeuelpi.lalaguna@gmail.com" style="color: var(--text-secondary); text-decoration: none;">Zeuelpi.lalaguna@gmail.com</a></p>
+                                 <h4>Email</h4>
+                                 <p><a href="mailto:Zeuelpi.lalaguna@gmail.com" class="contact-link">Zeuelpi.lalaguna@gmail.com</a></p>
                             </div>
                         </div>
-                        <div class="contact-item">
+<div class="contact-item">
                             <i class="fab fa-github"></i>
                             <div>
-                                <h4>GitHub Accounts</h4>
-                                <p><a href="https://github.com/Zeyu02" target="_blank" style="color: var(--text-secondary); text-decoration: none;">github.com/Zeyu02</a></p>
-                                <p><a href="https://github.com/Zeyuuu" target="_blank" style="color: var(--text-secondary); text-decoration: none;">github.com/Zeyuuu</a></p>
+                                  <h4>GitHub Accounts</h4>
+                                  <p><a href="https://github.com/Zeyu02" target="_blank" class="contact-link">github.com/Zeyu02</a></p>
+                                  <p><a href="https://github.com/Zeyuuu" target="_blank" class="contact-link">github.com/Zeyuuu</a></p>
                             </div>
-                        </div>
-                        <div class="contact-item">
+                      </div>
+                      <div class="contact-item">
+                            <i class="fab fa-telegram-plane"></i>
+                            <div>
+                                  <h4>Telegram</h4>
+                                  <p><a href="https://t.me/Zeeyuu22" target="_blank" class="contact-link">@Zeeyuu22</a></p>
+                            </div>
+                      </div>
+                      <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
                             <div>
-                                <h4>Contact</h4>
-                                <p><a href="tel:09914392420" style="color: var(--text-secondary); text-decoration: none;">09914392420</a></p>
+                                  <h4>Contact</h4>
+                                  <p><a href="tel:09914392420" class="contact-link">09914392420</a></p>
                             </div>
-                        </div>
+                      </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/mojoeapd" method="POST">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <label class="sr-only" for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <label class="sr-only" for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject">
+                        <label class="sr-only" for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <label class="sr-only" for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">Send Message</button>
                 </form>
@@ -486,9 +486,9 @@
                     <span class="logo-icon">Z</span>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/Zeuel.03/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://github.com/Zeyu02" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                    <a href="https://github.com/Zeyuuu" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/Zeuel.03/" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/Zeyu02" target="_blank" class="social-icon" aria-label="GitHub (Zeyu02)"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/Zeyuuu" target="_blank" class="social-icon" aria-label="GitHub (Zeyuuu)"><i class="fab fa-github"></i></a>
                 </div>
                 <p class="footer-text">&copy; 2026 Zeuel. All rights reserved.</p>
             </div>
@@ -499,7 +499,7 @@
         <div class="video-modal-backdrop" data-close-modal="true"></div>
         <div class="video-modal-dialog" role="dialog" aria-modal="true" aria-label="School project video player">
             <button class="video-modal-close" id="closeVideoModal" aria-label="Close video player">&times;</button>
-            <video id="modalVideo" class="modal-video" controls playsinline preload="metadata"></video>
+            <video id="modalVideo" class="modal-video" controls playsinline preload="metadata" muted="false" crossorigin="anonymous"></video>
             <p id="modalVideoTitle" class="modal-video-title"></p>
         </div>
     </div>
@@ -507,4 +507,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
